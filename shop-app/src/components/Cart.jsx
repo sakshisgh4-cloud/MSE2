@@ -1,7 +1,8 @@
 import React from 'react';
 
 export default function Cart({ items, onRemove, onClose, onUpdateQty }) {
-  const total = items.reduce((sum, item) => sum + item.price * item.count, 0);
+const total = items.reduce((sum, i) => sum + i.price * i.qty, 0);
+
 
   return (
     <>
